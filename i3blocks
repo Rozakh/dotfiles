@@ -1,0 +1,31 @@
+separator=false
+separator_block_width=20
+markup=pango
+
+[mail]
+command=i3gobar -m
+interval=300
+
+[volume]
+command=i3gobar -v
+interval=once
+signal=1
+
+[battery]
+command=i3gobar -b
+interval=60
+
+[date]
+label=
+command=date +%Y-%m-%d
+interval=60
+
+[time]
+label=
+command=date +%H:%M
+interval=60
+
+[power]
+full_text=
+command=i3gobar -p
+
