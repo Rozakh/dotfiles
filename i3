@@ -8,6 +8,7 @@ set $misc 
 set $game 
 set $chat 
 set $term 
+set $torr 
 
 # Settings
 font pango:Liberation Sans 12
@@ -45,6 +46,7 @@ bindsym $mod+3 workspace $misc
 bindsym $mod+4 workspace $game
 bindsym $mod+5 workspace $chat
 bindsym $mod+6 workspace $term
+bindsym $mod+7 workspace $torr
 
 bindsym $mod+Shift+1 move container to workspace $web
 bindsym $mod+Shift+2 move container to workspace $work
@@ -52,6 +54,7 @@ bindsym $mod+Shift+3 move container to workspace $misc
 bindsym $mod+Shift+4 move container to workspace $game
 bindsym $mod+Shift+5 move container to workspace $chat
 bindsym $mod+Shift+6 move container to workspace $term
+bindsym $mod+Shift+7 move container to workspace $torr
 
 bindsym $mod+Shift+r restart
 bindsym $mod+l exec --no-startup-id "scrot /tmp/screen_locked.png; mogrify -scale 10% -scale 1000% \
@@ -74,6 +77,7 @@ assign [class="Atom"] $work
 assign [class="Mainwindow.py"] $game
 assign [class="Steam"] $game
 assign [class="Gnome-terminal"] $term
+assign [class="Transmission-gtk"] $torr
 assign [class=".*"] $misc
 
 for_window [class="Nautilus"] floating enable
