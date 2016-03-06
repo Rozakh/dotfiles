@@ -18,7 +18,7 @@ new_float none
 
 # Key bindings
 bindsym $mod+r exec --no-startup-id j4-dmenu-desktop --dmenu='rofi -dmenu -i -p "run:" -bg "#222222" -fg "#888888" \
--hlbg "#285577" -hlfg "#ffffff" -hide-scrollbar' --no-generic
+-hlbg "#285577" -hlfg "#ffffff" -hide-scrollbar -font "Liberation Sans 14"' --no-generic
 bindsym $mod+t exec i3-sensible-terminal
 bindsym $mod+f exec $files
 bindsym $mod+b exec $browser
@@ -68,7 +68,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
 bindsym XF86KbdBrightnessDown exec --no-startup-id asus-kbd-backlight off
 bindsym XF86KbdBrightnessUp exec --no-startup-id asus-kbd-backlight max
 bindsym XF86TouchpadToggle exec --no-startup-id "id=$(xinput | grep -Eio 'touchpad\s*id\=[0-9]{1,2}' | grep -Eo \
-'[0-9]{1,2}'); xinput set-prop $id 127 $(xinput list-props $id | grep -c 'Device Enabled.*0')"
+'[0-9]{1,2}'); xinput set-prop $id 146 $(xinput list-props $id | grep -c 'Device Enabled.*0')"
 
 # Rules
 assign [class="google-chrome"] $web
@@ -88,6 +88,6 @@ exec --no-startup-id feh --bg-scale /home/hadal/Pictures/Wallpapers/poly.png
 exec --no-startup-id setxkbmap -layout us,ru -option grp:caps_toggle
 
 bar {
-	position top
+    position top
     status_command i3blocks
 }
