@@ -73,7 +73,7 @@ bindsym XF86TouchpadToggle exec --no-startup-id "id=$(xinput | grep -Eio 'touchp
 # Rules
 assign [class="google-chrome"] $web
 assign [class="Gedit"] $work
-assign [class="Atom"] $work
+assign [class="jetbrains-idea"] $work
 assign [class="Mainwindow.py"] $game
 assign [class="Steam"] $game
 assign [class="Gnome-terminal"] $term
