@@ -67,8 +67,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
 bindsym XF86KbdBrightnessDown exec --no-startup-id asus-kbd-backlight off
 bindsym XF86KbdBrightnessUp exec --no-startup-id asus-kbd-backlight max
-bindsym XF86TouchpadToggle exec --no-startup-id "id=$(xinput | grep -Eio 'touchpad\s*id\=[0-9]{1,2}' | grep -Eo \
-'[0-9]{1,2}'); xinput set-prop $id 146 $(xinput list-props $id | grep -c 'Device Enabled.*0')"
+bindsym XF86TouchpadToggle exec --no-startup-id xinput set-prop 13 127 $(xinput list-props 13 | grep -c 'Device Enabled.*0')
 
 # Rules
 assign [class="google-chrome"] $web
@@ -86,6 +85,7 @@ for_window [class="Mainwindow.py"] floating enable
 # Autostart
 exec --no-startup-id feh --bg-scale /home/hadal/Pictures/Wallpapers/poly.png
 exec --no-startup-id setxkbmap -layout us,ru -option grp:caps_toggle
+exec --no-startup-id xinput set-prop 13 263 1
 
 bar {
     position top
